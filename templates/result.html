@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Result</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h2>Highlighted Essay:</h2>
+    <div id="highlighted-essay">{{ essay|safe }}</div>
+
+    <h2>Prompt:</h2>
+    <pre>{{ prompt }}</pre>
+
+    <div id="prompt-container">
+        <div id="prompt-tooltip"></div>
+    </div>
+
+    <script src="{{ url_for('static', filename='scripts.js') }}"></script>
+</body>
+</html>
