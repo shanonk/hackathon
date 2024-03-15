@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Essay Evaluation - Microsoft Style</title>
     <style>
+        /* General Styles */
         body {
             font-family: Arial, sans-serif;
             background-color: #f3f3f3;
@@ -12,19 +13,42 @@
             padding: 0;
         }
         #container {
-            max-width: 800px;
+            max-width: 1200px;
             margin: 20px auto;
             background-color: #fff;
             padding: 20px;
             border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
         }
-        h1 {
-            color: #0078d4;
+        /* Header Styles */
+        header {
+            background-color: #0078d4;
+            color: #fff;
+            padding: 10px 0;
             text-align: center;
         }
+        header h1 {
+            margin: 0;
+            font-size: 36px;
+        }
+        nav {
+            margin-top: 20px;
+            text-align: center;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 18px;
+            transition: color 0.3s ease;
+        }
+        nav a:hover {
+            color: #f4f4f4;
+        }
+        /* Form Styles */
         form {
             text-align: center;
+            margin-top: 40px;
         }
         textarea {
             width: 100%;
@@ -47,15 +71,33 @@
         input[type="submit"]:hover {
             background-color: #005a9e;
         }
+        /* Footer Styles */
+        footer {
+            background-color: #0078d4;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+            margin-top: 50px;
+        }
     </style>
 </head>
 <body>
+    <header>
+        <h1>Welcome to the DocuMentor App!</h1>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+        </nav>
+    </header>
     <div id="container">
-        <h1>Welcome to Documentor!</h1>
         <form method="POST">
-            <textarea name="essay" rows="10" cols="50" placeholder="Enter your text"></textarea><br>
+            <textarea name="essay" rows="10" cols="50" placeholder="Enter your essay here"></textarea><br>
             <input type="submit" value="Let's go!">
         </form>
     </div>
+    <footer>
+        <p>&copy; 2024 Documentor App. All rights reserved.</p>
+    </footer>
 </body>
 </html>
