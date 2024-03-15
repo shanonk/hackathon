@@ -3,8 +3,104 @@
 <head>
     <title>Result</title>
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+
+        header {
+            background-color: #0078d4;
+            padding: 10px 0;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        header nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        header nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        header nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        h2 {
+            margin-top: 20px;
+            color: #0078d4;
+        }
+
+        #highlighted-essay {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+
+        #prompt-container {
+            margin-top: 20px;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            position: relative;
+        }
+
+        #prompt-tooltip {
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #0078d4;
+            color: #fff;
+            padding: 10px;
+            border-radius: 5px;
+            display: none;
+        }
+
+        #prompt-container:hover #prompt-tooltip {
+            display: block;
+        }
+
+        pre {
+            white-space: pre-wrap;
+            font-size: 14px;
+        }
+
+        footer {
+            background-color: #f4f4f4;
+            padding: 20px 0;
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
 </head>
 <body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Products</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Support</a></li>
+            </ul>
+        </nav>
+    </header>
+    
     <h2>Highlighted Essay:</h2>
     <div id="highlighted-essay">{{ essay|safe }}</div>
 
@@ -12,9 +108,11 @@
     <pre>{{ prompt }}</pre>
 
     <div id="prompt-container">
-        <div id="prompt-tooltip"></div>
+        <div id="prompt-tooltip">Click here for more information</div>
     </div>
 
-    <script src="{{ url_for('static', filename='scripts.js') }}"></script>
+    <footer>
+        <p>&copy; 2024. All rights reserved.</p>
+    </footer>
 </body>
 </html>
