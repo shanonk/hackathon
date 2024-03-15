@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Essay Evaluation</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h1>Welcome to the Documentor App!</h1>
+    <form method="POST">
+        <textarea name="essay" rows="10" cols="50"></textarea><br>
+        <input type="submit" value="Let's go!">
+    </form>
+
+    <div id="prompt-container">
+        <div id="prompt-tooltip"></div>
+    </div>
+
+    <script src="{{ url_for('static', filename='scripts.js') }}"></script>
+</body>
+</html>
